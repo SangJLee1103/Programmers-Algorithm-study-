@@ -103,7 +103,7 @@ package level1;
 
 import java.util.stream.Stream;
 
-public class level1_72410 {
+public class Level1_72410 {
     public static void main(String[] args) {
         String new_id = "abcdefghijklmn.p";
         String answer = "";

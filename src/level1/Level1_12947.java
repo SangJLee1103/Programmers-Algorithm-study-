@@ -1,6 +1,6 @@
 package level1;
 
-public class hashad {
+public class Level1_12947 {
     public static void main(String[] args) {
         boolean answer = true;
         int x = 126;
