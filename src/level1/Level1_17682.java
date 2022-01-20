@@ -31,18 +31,51 @@ package level1;
 //        예) 37
 //
 //        입출력 예제
-//        예제	dartResult	answer	설명
-//        1	1S2D*3T	37	11 * 2 + 22 * 2 + 33
-//        2	1D2S#10S	9	12 + 21 * (-1) + 101
-//        3	1D2S0T	3	12 + 21 + 03
-//        4	1S*2T*3S	23	11 * 2 * 2 + 23 * 2 + 31
-//        5	1D#2S*3S	5	12 * (-1) * 2 + 21 * 2 + 31
-//        6	1T2D3D#	-4	13 + 22 + 32 * (-1)
-//        7	1D2S3T*	59	12 + 21 * 2 + 33 * 2
+//        예제	        dartResult	        answer	설명
+//        1	1S2D*3T	    37	            1 * 2 + 4 * 2 + 3*3*3
+//        2	1D2S#10S	9	            1 + 21 * (-1) + 101
+//        3	1D2S0T	    3	            1 + 21 + 03
+//        4	1S*2T*3S	23	            1 * 2 * 2 + 23 * 2 + 31
+//        5	1D#2S*3S	5	            1 * (-1) * 2 + 21 * 2 + 31
+//        6	1T2D3D#	    -4	            1 + 22 + 32 * (-1)
+//        7	1D2S3T*	    59	            1 + 21 * 2 + 33 * 2
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Level1_17682 {
     public static void main(String[] args) {
-        String dartResult = "";
+        String dartResult = "1S2D*3T";
+        String temp = "";
+
+        int index = 0;
+        int[] scores = new int[3];
         int answer = 0;
+
+        for(int i=0; i<dartResult.length(); i++){
+            char ch = dartResult.charAt(i);
+            if(ch >= '0' && ch <= '9'){
+                temp+= String.valueOf(ch);
+            }else if(ch == 'S' || ch == 'D' || ch == 'T'){
+                int num = Integer.parseInt(temp);
+
+                if(ch == 'S') num = (int)Math.pow(num, 1);
+                else if(ch == 'D') num = (int) Math.pow(num, 2);
+                else if(ch == 'T') num = (int) Math.pow(num, 3);
+
+                scores[index++] = num;
+                temp = "";
+            }else{
+                if(ch == '#') {
+                    scores[index - 1] *= -1;
+                }
+                else{
+                    scores[index-1] *= 2;
+                    if(index-2 >= 0) scores[index-2] *= 2;
+                }
+            }
+        }
+        answer = Arrays.stream(scores).sum();
+        System.out.println("answer = " + answer);
     }
 }
