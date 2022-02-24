@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 //
 //0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.
 //
@@ -18,7 +18,6 @@ package level2;
 
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Level2_42746 {
     public static void main(String[] args) {

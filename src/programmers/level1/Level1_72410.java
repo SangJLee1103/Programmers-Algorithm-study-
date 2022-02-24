@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 
 //카카오에 입사한 신입 개발자 네오는 "카카오계정개발팀"에 배치되어, 카카오 서비스에 가입하는 유저들의 아이디를 생성하는 업무를 담당하게 되었습니다.
@@ -100,8 +100,6 @@ package level1;
 //        6단계 "abcdefghijklmn.p" → "abcdefghijklmn." → "abcdefghijklmn"
 //        7단계 변화 없습니다.
 
-
-import java.util.stream.Stream;
 
 public class Level1_72410 {
     public static void main(String[] args) {

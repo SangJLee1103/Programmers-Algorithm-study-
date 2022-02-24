@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 //H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다.
 // 위키백과1에 따르면, H-Index는 다음과 같이 구합니다.
@@ -18,7 +18,6 @@ package level2;
 //        그리고 나머지 2편의 논문은 3회 이하 인용되었기 때문에 이 과학자의 H-Index는 3입니다.
 
 import java.util.Arrays;
-import java.util.Collections;
 
 
 public class Level2_42747 {

@@ -1,4 +1,4 @@
-package level1;
+package programmers.level1;
 
 //다트 게임
 //        카카오톡에 뜬 네 번째 별! 심심할 땐? 카카오톡 게임별~
@@ -41,7 +41,6 @@ package level1;
 //        7	1D2S3T*	    59	            1 + 21 * 2 + 33 * 2
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class Level1_17682 {
     public static void main(String[] args) {

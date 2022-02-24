@@ -1,4 +1,4 @@
-package level2;
+package programmers.level2;
 
 //스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.
 //
@@ -39,7 +39,6 @@ package level2;
 //        2. blue_sunglasses
 //        3. smoky_makeup
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 
